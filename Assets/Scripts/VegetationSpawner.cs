@@ -44,6 +44,11 @@ public class VegetationSpawner : MonoBehaviour {
             }
         }
     }
+    
+    public void ClearVegetation() {
+        while (transform.childCount > 0)
+            DestroyImmediate(transform.GetChild(0).gameObject);
+    }
 
     public void OnDrawGizmos() {
         // draw spawn area

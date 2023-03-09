@@ -10,6 +10,10 @@ public class VegetationSpawnerEditor : Editor {
         if(GUILayout.Button("Spawn Vegetation")) {
             spawner.SpawnVegetation();
         }
+        
+        if(GUILayout.Button("Clear")) {
+            spawner.ClearVegetation();
+        }
     }
 }
 
