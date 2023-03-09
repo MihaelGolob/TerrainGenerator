@@ -26,19 +26,13 @@ public class TerrainRenderer : MonoBehaviour {
     private float[,] _falloffMap;
 
     private void Awake() {
-        CreateTerrain();
-    }
-    
-    private void CreateTerrain() {
-        _falloffMap = FalloffGenerator.GenerateFalloffMap(_falloffType, _terrain.Size.x + 1,  _falloffSpeed, _falloffStart, _falloffOffset);
-
-        if (_useFalloff) 
-            ApplyFalloff();
-        
-        ApplyToMesh();
+        RenderTerrain();
     }
 
     private void ColorTerrain(out Color[] vertexColors) {
+        vertexColors = null;
+        if (_terrain.Terrain.vertices == null) return;
+        
         vertexColors = new Color[_terrain.Terrain.vertices.Length];
         for (var i = 0; i < vertexColors.Length; i++) {
             var height = _terrain.Terrain.vertices[i].y + _yOffset;
@@ -86,6 +80,7 @@ public class TerrainRenderer : MonoBehaviour {
             _falloffMap = FalloffGenerator.GenerateFalloffMap(_falloffType, _terrain.Size.x + 1,  _falloffSpeed, _falloffStart, _falloffOffset);
             ApplyFalloff();
         }
+        
         ApplyToMesh();
     }
 }
