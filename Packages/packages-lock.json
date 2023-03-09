@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "com.ineor.notification-system": {
-      "version": "file:/Users/m.golob/Documents/Ineor Unity Packages/notification-system",
+      "version": "https://github.com/MihaelGolob/notification-system.git",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "51127fd9b626fb2ebc949bb00bae96c7de6c12d6"
     },
     "com.unity.burst": {
       "version": "1.8.2",
