@@ -49,8 +49,8 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Wind_Density: 0.6
-    - _Wind_Strength: 0.4
+    - _Wind_Density: 0.2
+    - _Wind_Strength: 0.5
     m_Colors:
     - _GrassColor: {r: 0.02959237, g: 0.3301887, b: 0.06401024, a: 0}
     - _Wind_Movement: {r: 2, g: 0, b: 0, a: 0}
